@@ -9,7 +9,8 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     },
     date: "Feb 2024 - Present",
     location: "Enugu",
-    description: "Full Stack app development, Microservices, Scaling, Performance",
+    description:
+      "Full Stack app development, Microservices, Scaling, Performance",
   },
   {
     title: "Fullstack Engineer",
@@ -19,8 +20,7 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     },
     date: "Nov 2021 - Dec 2024",
     location: "On site/Remote",
-    description:
-      `In Collaboration with Game Devs, building, integrating and maintaining Game Economy and Game Chat system for a BR Game.
+    description: `In Collaboration with Game Devs, building, integrating and maintaining Game Economy and Game Chat system for a BR Game.
       With a team of Developers, developed Web Frontend app, integrated blockchain contracts, 
       contributed api's to the backend and called its infrastructure to the frontend with proper risk and Exception Management.
       `,

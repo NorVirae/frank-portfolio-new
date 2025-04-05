@@ -47,12 +47,25 @@ export default function LandingHero() {
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
-                I am a seasoned software engineer with over 7 years of professional full-stack development experience,
-                specializing in building high-performance,
-                user-centric web applications using <span className="font-semibold text-accent">ReactJS</span>, <span className="font-semibold text-accent">NextJS</span>, and <span className="font-semibold text-accent">NestJS</span>. I excel in <span className="font-semibold text-accent">JavaScript, Typescript, Python</span>, <span className="font-semibold text-accent">HTML</span>, and <span className="font-semibold text-accent">CSS</span>, and I am versatile with <span className="font-semibold text-accent">GCP</span> and <span className="font-semibold text-accent">AWS</span>, with a proven track record of effectively managing client relationships.
+                I am a seasoned software engineer with over 7 years of
+                professional full-stack development experience, specializing in
+                building high-performance, user-centric web applications using{" "}
+                <span className="font-semibold text-accent">ReactJS</span>,{" "}
+                <span className="font-semibold text-accent">NextJS</span>, and{" "}
+                <span className="font-semibold text-accent">NestJS</span>. I
+                excel in{" "}
+                <span className="font-semibold text-accent">
+                  JavaScript, Typescript, Python
+                </span>
+                , <span className="font-semibold text-accent">HTML</span>, and{" "}
+                <span className="font-semibold text-accent">CSS</span>, and I am
+                versatile with{" "}
+                <span className="font-semibold text-accent">GCP</span> and{" "}
+                <span className="font-semibold text-accent">AWS</span>, with a
+                proven track record of effectively managing client
+                relationships.
               </div>
             </FadeUp>
-
           </AnimatePresence>
         </div>
       </div>

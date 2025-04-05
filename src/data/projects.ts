@@ -1,6 +1,6 @@
 import { type ProjectCardProps } from "@/components/projects/project-card";
 import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+// import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
@@ -71,8 +71,6 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       DARK: "/images/projects/cyb1.webp",
     },
   },
-
-
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
@@ -86,10 +84,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/loooty4.webp",
       "/images/projects/loooty5.webp",
       "/images/projects/loooty6.webp",
-
     ],
-    description:
-      "3D Asset Market place for Games",
+    description: "3D Asset Market place for Games",
     sourceCodeHref: "",
     liveWebsiteHref: "https://loooty.com",
   },
@@ -103,10 +99,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/hospital4.webp",
       "/images/projects/hospital5.webp",
       "/images/projects/hospital6.webp",
-
     ],
-    description:
-      "A Hospital Management system Equiped with SNOMED CT",
+    description: "A Hospital Management system Equiped with SNOMED CT",
     sourceCodeHref: "",
     liveWebsiteHref: "",
   },
@@ -132,10 +126,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/blackhards3.webp",
       "/images/projects/blackhards4.webp",
       "/images/projects/blackhards5.webp",
-
     ],
-    description:
-      "Marketplace for Game codes",
+    description: "Marketplace for Game codes",
     sourceCodeHref: "",
     liveWebsiteHref: "https://www.blackhards.com",
   },
@@ -148,10 +140,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/cyb3.webp",
       "/images/projects/cyb4.webp",
       "/images/projects/cyb5.webp",
-
     ],
-    description:
-      "Multiplayer game with features from Axie Infinity",
+    description: "Multiplayer game with features from Axie Infinity",
     sourceCodeHref: "",
     liveWebsiteHref: "https://cyberspawns.com",
   },
@@ -164,10 +154,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/pod3.webp",
       "/images/projects/pod4.webp",
       "/images/projects/pod5.webp",
-
     ],
-    description:
-      "Decentralised Podcast system",
+    description: "Decentralised Podcast system",
     sourceCodeHref: "https://github.com/PodShip",
   },
 ];

@@ -11,5 +11,5 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
     location: "Elele, Portharcout, Rivers State",
     description:
       "Relevant courses included Data Structures and Algorithms, Web Design, Cloud Computing, Artificial Neural Network and Database Management.",
-  }
+  },
 ];
