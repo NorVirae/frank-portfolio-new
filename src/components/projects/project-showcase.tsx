@@ -78,7 +78,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{
                     duration: 0.4,
-                    ease: [0.6, 0.05, 0.01, 0.9]
+                    ease: [0.6, 0.05, 0.01, 0.9],
                   }}
                 >
                   {/* Gamified Frame for Preview */}
@@ -129,7 +129,10 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
               </div>
               <p className="flex flex-wrap gap-2">
                 {proj.tags.map((tag, index) => (
-                  <span key={index} className="rounded-full bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+                  <span
+                    key={index}
+                    className="rounded-full bg-accent/10 px-2 py-1 text-xs font-bold text-accent"
+                  >
                     #{tag}
                   </span>
                 ))}

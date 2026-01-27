@@ -3,13 +3,14 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-border bg-background pt-16 pb-8">
+    <footer className="w-full border-t border-border bg-background pb-8 pt-16">
       <div className="mx-auto max-w-7xl px-6 sm:px-14 md:px-20">
         <div className="flex flex-col justify-between gap-12 md:flex-row md:gap-8">
           {/* Brand / Contact Column */}
           <div className="flex flex-col gap-6 md:w-1/2">
             <h2 className="text-3xl font-bold uppercase tracking-tighter md:text-5xl lg:text-6xl">
-              Let&apos;s Build <br /> Something <span className="text-accent">Real.</span>
+              Let&apos;s Build <br /> Something{" "}
+              <span className="text-accent">Real.</span>
             </h2>
             <div className="flex flex-col gap-2">
               <span className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
@@ -60,7 +61,14 @@ export default function Footer() {
           <span>&copy; {new Date().getFullYear()} Norbert Frank Mba</span>
           <div className="flex gap-8">
             <span>Zurich, CH (Remote)</span>
-            <span>Local Time: {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich' })}</span>
+            <span>
+              Local Time:{" "}
+              {new Date().toLocaleTimeString("en-US", {
+                hour: "2-digit",
+                minute: "2-digit",
+                timeZone: "Europe/Zurich",
+              })}
+            </span>
           </div>
         </div>
       </div>

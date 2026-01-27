@@ -57,9 +57,9 @@ export default function Navbar(props: NavbarProps) {
                     href={_link.href}
                     className={classNames(
                       pathName === _link.href
-                        ? "text-accent font-bold"
+                        ? "font-bold text-accent"
                         : "text-muted-foreground hover:text-foreground",
-                      "transition-colors duration-200"
+                      "transition-colors duration-200",
                     )}
                   >
                     {_link.title}

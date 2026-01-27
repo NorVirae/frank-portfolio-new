@@ -69,7 +69,7 @@ export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
                   transition={{
                     duration: 0.4,
                     delay: isMobileDebonced ? 0 : index * 0.03,
-                    ease: [0.6, 0.05, 0.01, 0.9]
+                    ease: [0.6, 0.05, 0.01, 0.9],
                   }}
                 >
                   <SkillPill {...pill} />

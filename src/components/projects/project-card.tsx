@@ -28,7 +28,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-        className="absolute top-4 right-4 z-10 rounded-full border border-accent/50 bg-background/90 px-3 py-1 text-xs font-bold text-accent backdrop-blur-md"
+        className="absolute right-4 top-4 z-10 rounded-full border border-accent/50 bg-background/90 px-3 py-1 text-xs font-bold text-accent backdrop-blur-md"
       >
         +3000 XP
       </motion.div>
@@ -49,7 +49,12 @@ export default function ProjectCard(props: ProjectCardProps) {
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-center gap-3">
           <div className="relative h-6 w-6 overflow-hidden rounded-md border border-border">
-            <Image src={props.favicon} alt="logo" fill className="object-cover" />
+            <Image
+              src={props.favicon}
+              alt="logo"
+              fill
+              className="object-cover"
+            />
           </div>
           <h3 className="text-xl font-bold uppercase tracking-tight text-foreground transition-colors group-hover:text-accent">
             {props.name}

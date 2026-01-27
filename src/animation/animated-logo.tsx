@@ -7,7 +7,7 @@ export default function AnimatedLogo() {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative h-full w-full flex items-center justify-center"
+      className="relative flex h-full w-full items-center justify-center"
     >
       <Image
         src="/images/vyra.svg"

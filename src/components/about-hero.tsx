@@ -15,7 +15,7 @@ export default function AboutHero() {
       >
         <motion.div
           whileHover={{ y: -10, transition: { duration: 0.3 } }}
-          className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-2xl border-2 border-accent/20 bg-muted shadow-2xl lg:mx-0"
+          className="mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-2xl border-2 border-accent/20 bg-muted shadow-2xl lg:mx-0"
         >
           <Image
             src={heroProfileImg}
@@ -30,7 +30,7 @@ export default function AboutHero() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="absolute top-4 left-4 h-8 w-8 border-t-2 border-l-2 border-accent"
+            className="absolute left-4 top-4 h-8 w-8 border-l-2 border-t-2 border-accent"
           />
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -77,32 +77,59 @@ export default function AboutHero() {
           className="mt-8 space-y-4 text-base font-medium leading-relaxed text-muted-foreground md:text-lg"
         >
           <p>
-            I'm a <span className="font-semibold text-accent">software engineer</span> with over{" "}
-            <span className="font-semibold text-accent">7 years</span> of professional{" "}
-            <span className="font-semibold text-accent">full-stack</span> experience, specialized in building{" "}
+            I&apos;m a{" "}
+            <span className="font-semibold text-accent">software engineer</span>{" "}
+            with over <span className="font-semibold text-accent">7 years</span>{" "}
+            of professional{" "}
+            <span className="font-semibold text-accent">full-stack</span>{" "}
+            experience, specialized in building{" "}
             <span className="font-semibold text-accent">high-performance</span>,{" "}
             <span className="font-semibold text-accent">responsive</span>, and{" "}
-            <span className="font-semibold text-accent">user-centric</span> web applications. I focus on delivering{" "}
+            <span className="font-semibold text-accent">user-centric</span> web
+            applications. I focus on delivering{" "}
             <span className="font-semibold text-accent">intelligent</span> and{" "}
-            <span className="font-semibold text-accent">user-friendly</span> products that{" "}
-            <span className="font-semibold text-accent">scale on cloud infrastructure</span>.
+            <span className="font-semibold text-accent">user-friendly</span>{" "}
+            products that{" "}
+            <span className="font-semibold text-accent">
+              scale on cloud infrastructure
+            </span>
+            .
           </p>
 
           <p>
-            I'm fascinated by <span className="font-semibold text-accent">mathematics</span> and obsessed with{" "}
-            <span className="font-semibold text-accent">machine learning algos</span> and{" "} its applications towards {" "}
-            <span className="font-semibold text-accent">Embodied AI or Robotics</span>. I Practice{" "}
-            <span className="font-semibold text-accent">Deep Work</span> — I apply{" "}
-            <span className="font-semibold text-accent">deep focus</span> to a{" "}
-            <span className="font-semibold text-accent">Software Engineering problem</span> until it's solved{" "}
+            I&apos;m fascinated by{" "}
+            <span className="font-semibold text-accent">mathematics</span> and
+            obsessed with{" "}
+            <span className="font-semibold text-accent">
+              machine learning algos
+            </span>{" "}
+            and its applications towards{" "}
+            <span className="font-semibold text-accent">
+              Embodied AI or Robotics
+            </span>
+            . I Practice{" "}
+            <span className="font-semibold text-accent">Deep Work</span> — I
+            apply <span className="font-semibold text-accent">deep focus</span>{" "}
+            to a{" "}
+            <span className="font-semibold text-accent">
+              Software Engineering problem
+            </span>{" "}
+            until it&apos;s solved{" "}
             <span className="font-semibold text-accent">effectively</span> and{" "}
             <span className="font-semibold text-accent">on schedule</span>.
           </p>
 
           <p>
-            If you want to <span className="font-semibold text-accent">move fast</span> without{" "}
-            <span className="font-semibold text-accent">sacrificing quality</span>, I'm your{" "}
-            <span className="font-semibold text-accent">go-to software engineer</span>.
+            If you want to{" "}
+            <span className="font-semibold text-accent">move fast</span> without{" "}
+            <span className="font-semibold text-accent">
+              sacrificing quality
+            </span>
+            , I&apos;m your{" "}
+            <span className="font-semibold text-accent">
+              go-to software engineer
+            </span>
+            .
           </p>
         </motion.div>
 
@@ -116,7 +143,7 @@ export default function AboutHero() {
           {[
             { value: "7+", label: "Yrs Exp" },
             { value: "20+", label: "Projects" },
-            { value: "100%", label: "Committed" }
+            { value: "100%", label: "Committed" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -127,7 +154,11 @@ export default function AboutHero() {
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.6 + index * 0.1, duration: 0.5, type: "spring" }}
+                transition={{
+                  delay: 0.6 + index * 0.1,
+                  duration: 0.5,
+                  type: "spring",
+                }}
                 className="block text-3xl font-black text-accent"
               >
                 {stat.value}

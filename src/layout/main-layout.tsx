@@ -17,9 +17,14 @@ export interface MainLayoutProps {
 
 export default function MainLayout(props: MainLayoutProps) {
   return (
-    <div className={classNames("flex min-h-screen flex-col bg-background font-sans text-foreground", montserrat.variable)}>
+    <div
+      className={classNames(
+        "flex min-h-screen flex-col bg-background font-sans text-foreground",
+        montserrat.variable,
+      )}
+    >
       <Navbar routes={routes} />
-      <main className="flex-1 w-full relative">{props.children}</main>
+      <main className="relative w-full flex-1">{props.children}</main>
       <Footer />
     </div>
   );

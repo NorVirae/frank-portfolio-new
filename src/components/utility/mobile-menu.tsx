@@ -47,7 +47,7 @@ export default function MobileMenu({
                       pathName === link.href
                         ? "bg-accent/10 text-accent"
                         : "text-foreground hover:bg-muted",
-                      "group flex w-full items-center rounded-md px-4 py-3 text-sm font-medium transition-colors"
+                      "group flex w-full items-center rounded-md px-4 py-3 text-sm font-medium transition-colors",
                     )}
                     onClick={() => handleClick(link.href)}
                   >
@@ -55,7 +55,7 @@ export default function MobileMenu({
                   </button>
                 ))}
               </div>
-              <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground uppercase tracking-widest">
+              <div className="mt-8 border-t border-border pt-6 text-center text-xs uppercase tracking-widest text-muted-foreground">
                 ©2023 Norbert Frank Mba
               </div>
             </Dialog.Panel>

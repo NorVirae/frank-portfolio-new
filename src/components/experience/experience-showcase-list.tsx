@@ -19,7 +19,8 @@ export default function ExperienceShowcaseList(
   });
 
   // Determine if this is Experience or Education to customize the "Quest" title
-  const questTitle = props.title === "Experience" ? "Main Quests" : "Side Quests";
+  const questTitle =
+    props.title === "Experience" ? "Main Quests" : "Side Quests";
 
   return (
     <div className="my-24 md:my-32">
@@ -43,7 +44,11 @@ export default function ExperienceShowcaseList(
 
           <ul className="flex flex-col gap-12">
             {props.details.map((_details, index) => (
-              <ExperienceShowcaseListItem key={index} {..._details} index={index} />
+              <ExperienceShowcaseListItem
+                key={index}
+                {..._details}
+                index={index}
+              />
             ))}
           </ul>
         </div>
