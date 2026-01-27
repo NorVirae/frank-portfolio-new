@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="mt-20 flex w-full flex-col-reverse items-center justify-between gap-4 border-t border-border pt-8 text-xs font-medium uppercase tracking-wider text-muted-foreground md:flex-row">
           <span>&copy; {new Date().getFullYear()} Norbert Frank Mba</span>
           <div className="flex gap-8">
-            <span>Zurich, CH (Remote)</span>
+            <span>Nigeria, NG (Remote)</span>
             <span>
               Local Time:{" "}
               {new Date().toLocaleTimeString("en-US", {
