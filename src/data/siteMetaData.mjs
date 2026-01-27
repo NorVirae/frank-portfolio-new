@@ -8,7 +8,7 @@ export const siteMetadata = {
   siteName: "norbertmbafrank.blackhards.com",
   siteUrl: "https://norbertmbafrank.blackhards.com",
   siteRepo: "https://github.com/NorVirae",
-  siteLogo: "/favicon.ico",
+  siteLogo: "/images/vyra.svg",
   image: "/static/homepage.png",
   twitterImage: "/static/homepage.png",
   socialBanner: "/static/homepage.png",
