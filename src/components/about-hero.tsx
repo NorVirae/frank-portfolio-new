@@ -5,7 +5,7 @@ import heroProfileImg from "@/public/images/heroProfile.png";
 
 export default function AboutHero() {
   return (
-    <section className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-12 px-6 py-20 text-center sm:px-14 md:px-20 lg:flex-row lg:text-left">
+    <section className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-12 px-6 py-4 text-center sm:px-14 md:px-20 lg:flex-row lg:text-left">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -69,17 +69,42 @@ export default function AboutHero() {
           Norbert <br /> Frank Mba
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-8 text-lg font-medium leading-relaxed text-muted-foreground"
+          className="mt-8 space-y-4 text-base font-medium leading-relaxed text-muted-foreground md:text-lg"
         >
-          I turn vision into reality with code. Whether I&apos;m working on
-          a website or any digital product, I bring my commitment to design
-          excellence and user-centered thinking to every project I work on.
-        </motion.p>
+          <p>
+            I'm a <span className="font-semibold text-accent">software engineer</span> with over{" "}
+            <span className="font-semibold text-accent">7 years</span> of professional{" "}
+            <span className="font-semibold text-accent">full-stack</span> experience, specialized in building{" "}
+            <span className="font-semibold text-accent">high-performance</span>,{" "}
+            <span className="font-semibold text-accent">responsive</span>, and{" "}
+            <span className="font-semibold text-accent">user-centric</span> web applications. I focus on delivering{" "}
+            <span className="font-semibold text-accent">intelligent</span> and{" "}
+            <span className="font-semibold text-accent">user-friendly</span> products that{" "}
+            <span className="font-semibold text-accent">scale on cloud infrastructure</span>.
+          </p>
+
+          <p>
+            I'm fascinated by <span className="font-semibold text-accent">mathematics</span> and obsessed with{" "}
+            <span className="font-semibold text-accent">machine learning algos</span> and{" "} its applications towards {" "}
+            <span className="font-semibold text-accent">Embodied AI or Robotics</span>. I Practice{" "}
+            <span className="font-semibold text-accent">Deep Work</span> — I apply{" "}
+            <span className="font-semibold text-accent">deep focus</span> to a{" "}
+            <span className="font-semibold text-accent">Software Engineering problem</span> until it's solved{" "}
+            <span className="font-semibold text-accent">effectively</span> and{" "}
+            <span className="font-semibold text-accent">on schedule</span>.
+          </p>
+
+          <p>
+            If you want to <span className="font-semibold text-accent">move fast</span> without{" "}
+            <span className="font-semibold text-accent">sacrificing quality</span>, I'm your{" "}
+            <span className="font-semibold text-accent">go-to software engineer</span>.
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -22,29 +22,31 @@ export default function ExperienceShowcaseList(
   const questTitle = props.title === "Experience" ? "Main Quests" : "Side Quests";
 
   return (
-    <div className="mx-auto my-24 max-w-5xl px-6 sm:px-14 md:my-32 md:px-20">
-      <div className="mb-16 flex flex-col items-center justify-center gap-4">
-        <span className="text-sm font-bold uppercase tracking-widest text-accent">
-          {props.title} Log
-        </span>
-        <h2 className="text-center text-4xl font-black uppercase tracking-tight text-foreground sm:text-5xl md:text-6xl">
-          {questTitle}
-        </h2>
-        <div className="h-1 w-20 bg-accent"></div>
-      </div>
+    <div className="my-24 md:my-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-14 md:px-20">
+        <div className="mb-16 flex flex-col items-center justify-center gap-4">
+          <span className="text-sm font-bold uppercase tracking-widest text-accent">
+            {props.title} Log
+          </span>
+          <h2 className="text-center text-4xl font-black uppercase tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            {questTitle}
+          </h2>
+          <div className="h-1 w-20 bg-accent"></div>
+        </div>
 
-      <div ref={ref} className="relative w-full">
-        {/* Timeline Line */}
-        <motion.div
-          style={{ scaleY: scrollYProgress }}
-          className="absolute left-8 top-0 h-full w-[2px] origin-top bg-accent/30 md:left-1/2 md:-ml-[1px]"
-        ></motion.div>
+        <div ref={ref} className="relative w-full">
+          {/* Timeline Line */}
+          <motion.div
+            style={{ scaleY: scrollYProgress }}
+            className="absolute left-8 top-0 h-full w-[2px] origin-top bg-accent/30 md:left-1/2 md:-ml-[1px]"
+          ></motion.div>
 
-        <ul className="flex flex-col gap-12">
-          {props.details.map((_details, index) => (
-            <ExperienceShowcaseListItem key={index} {..._details} index={index} />
-          ))}
-        </ul>
+          <ul className="flex flex-col gap-12">
+            {props.details.map((_details, index) => (
+              <ExperienceShowcaseListItem key={index} {..._details} index={index} />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -76,7 +76,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Loooty",
-    favicon: "/images/projects/logos/jsontree.ico",
+    favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/loooty1.webp",
       "/images/projects/loooty2.webp",
@@ -91,7 +91,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "EHR System",
-    favicon: "/images/projects/logos/kanban.ico",
+    favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/hospital1.webp",
       "/images/projects/hospital2.webp",
@@ -106,7 +106,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "AI Amara",
-    favicon: "/images/projects/logos/manygames.ico",
+    favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/AIAmara1.webp",
       "/images/projects/AIAmara2.webp",
@@ -119,7 +119,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Blackhards",
-    favicon: "/favicon.ico",
+    favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/blackhards1.webp",
       "/images/projects/blackhards2.webp",
@@ -133,7 +133,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "CyberSpawns",
-    favicon: "/images/projects/logos/covidtracker.ico",
+    favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/cyb1.webp",
       "/images/projects/cyb2.webp",
@@ -147,7 +147,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Podship",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/pod1.webp",
       "/images/projects/pod2.webp",

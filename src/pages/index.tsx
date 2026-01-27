@@ -14,13 +14,13 @@ export default function Home() {
     <>
       <NextSeo
         title="Norbert Frank Mba | Software Developer"
-        description="Norbert Frank Mba is a seasoned software engineer with over 7 years of professional full-stack development experience, specializing in high-performance, user-centric web applications using ReactJS, NextJS, and SolidJS, with expertise in JavaScript, HTML, and CSS, versatile skills in GCP and AWS, and a proven track record of effectively managing client relationships."
+        description="Norbert Frank Mba is a seasoned software engineer with over 7 years of professional full-stack development experience, specialized in high-performance, user-centric web applications using ReactJS, NextJS, and SolidJS, with expertise in JavaScript, HTML, and CSS, versatile skills in GCP and AWS, and a proven track record of effectively managing client relationships."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
           title: "Norbert Frank Mba - Software Developer",
           description:
-            "Dive into the world of web development with Norbert Frank Mba, a seasoned Software Developer with over 7 years of professional full-stack development experience, specializing in high-performance, user-centric web applications built with ReactJS, NextJS, and SolidJS, skilled in JavaScript, HTML, and CSS, versatile with GCP and AWS cloud systems, and renowned for effectively managing client relationships.",
+            "Dive into the world of web development with Norbert Frank Mba, a seasoned Software Developer with over 7 years of professional full-stack development experience, specialized in high-performance, user-centric web applications built with ReactJS, NextJS, and SolidJS, skilled in JavaScript, HTML, and CSS, versatile with GCP and AWS cloud systems, and renowned for effectively managing client relationships.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,

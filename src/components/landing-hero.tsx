@@ -12,7 +12,7 @@ export default function LandingHero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-[90vh] w-full flex-col items-center justify-center gap-12 py-12 md:flex-row md:justify-between">
+    <section className="relative flex min-h-[70vh] w-full flex-col items-center justify-center gap-12 py-3 md:flex-row md:justify-between">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 sm:px-14 md:flex-row md:px-20">
         {/* Left Column: Typography */}
         <motion.div
@@ -36,18 +36,23 @@ export default function LandingHero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-5xl font-extrabold uppercase leading-tight tracking-tighter text-foreground sm:text-6xl md:text-7xl xl:text-8xl"
           >
-            I Build <br />
-            <span className="text-accent">Digital</span> <br />
-            Worlds.
+            I <br />Build <br />
+            <span className="text-accent sm:text-3xl md:text-4xl xl:text-5xl">Intelligent</span><br />
+            Software.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="max-w-lg text-lg font-medium leading-relaxed text-muted-foreground md:text-xl"
+            className="max-w-lg text-base font-medium leading-relaxed text-muted-foreground md:text-lg"
           >
-            Constructing intelligent, scalable web applications with a focus on performance and user experience.
+            I'm a <span className="font-semibold text-accent">software engineer</span> with over{" "}
+            <span className="font-semibold text-accent">7 years</span> of professional{" "}
+            <span className="font-semibold text-accent">full-stack</span> experience, specialized in building{" "}
+            <span className="font-semibold text-accent">high-performance</span>,{" "}
+            <span className="font-semibold text-accent">responsive</span>, and{" "}
+            <span className="font-semibold text-accent">user-centric</span> web applications.
           </motion.p>
 
           <motion.div
