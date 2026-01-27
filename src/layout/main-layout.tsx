@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 import { Montserrat } from "next/font/google";
 
 import Navbar from "@/layout/navbar";
@@ -9,6 +8,7 @@ import { classNames } from "@/utility/classNames";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
 export interface MainLayoutProps {
@@ -17,12 +17,10 @@ export interface MainLayoutProps {
 
 export default function MainLayout(props: MainLayoutProps) {
   return (
-    <>
-      <div className={classNames("min-h-screen", montserrat.className)}>
-        <Navbar routes={routes} />
-        <main>{props.children}</main>
-      </div>
+    <div className={classNames("flex min-h-screen flex-col bg-background font-sans text-foreground", montserrat.variable)}>
+      <Navbar routes={routes} />
+      <main className="flex-1 w-full relative">{props.children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

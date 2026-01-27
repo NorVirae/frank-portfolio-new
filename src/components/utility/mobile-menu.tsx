@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 
 import { Dialog, Transition } from "@headlessui/react";
 
-import ThemeSwitch from "@/components/utility/theme-switch";
 import { type NavbarProps } from "@/layout/navbar";
 import { classNames } from "@/utility/classNames";
 
@@ -29,36 +28,34 @@ export default function MobileMenu({
   return (
     <Transition show={openMenu} as={Fragment}>
       <Dialog as="div" className="z-50" onClose={setOpenMenu}>
-        <div className="fixed inset-0 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 flex items-start justify-center bg-background/80 backdrop-blur-md">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
-            enterFrom="opacity-0 bottom-full"
-            enterTo="opacity-100 bottom-[15%]"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
             leave="ease-in duration-200"
-            leaveFrom="opacity-100 bottom-[15%]"
-            leaveTo="opacity-0 bottom-full"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-background px-6 py-8 text-accent shadow-lg shadow-accent/10 md:px-10 md:py-16">
-              <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
+            <Dialog.Panel className="mt-20 w-full max-w-lg overflow-y-auto rounded-lg border border-border bg-background p-6 shadow-xl">
+              <div className="flex flex-col space-y-4">
                 {routes.map((link, i) => (
                   <button
                     key={i}
-                    className="group relative py-2 text-3xl font-medium"
+                    className={classNames(
+                      pathName === link.href
+                        ? "bg-accent/10 text-accent"
+                        : "text-foreground hover:bg-muted",
+                      "group flex w-full items-center rounded-md px-4 py-3 text-sm font-medium transition-colors"
+                    )}
                     onClick={() => handleClick(link.href)}
                   >
-                    <span
-                      className={classNames(
-                        pathName === link.href ? "w-full" : "w-0",
-                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
-                      )}
-                    ></span>
                     {link.title}
                   </button>
                 ))}
-                <ThemeSwitch setClose={setOpenMenu} />
               </div>
-              <div className="absolute bottom-0 py-6">
+              <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground uppercase tracking-widest">
                 ©2023 Norbert Frank Mba
               </div>
             </Dialog.Panel>

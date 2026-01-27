@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import MenuLogo from "@/components/utility/menu-button";
 import ThemeSwitch from "@/components/utility/theme-switch";
@@ -23,7 +22,6 @@ export interface NavbarProps {
 
 export default function Navbar(props: NavbarProps) {
   const pathName = usePathname();
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -31,60 +29,53 @@ export default function Navbar(props: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
-      <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-14 md:px-20">
         <Link
           href="/"
-          className="drop-shadow-teralight flex items-center justify-center"
+          className="flex items-center gap-2"
           aria-label="Return to home page"
         >
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14">
+          <motion.div
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.6 }}
+            className="relative h-10 w-10"
+          >
             <AnimatedLogo />
-          </div>
+          </motion.div>
+          <span className="hidden text-lg font-bold tracking-tight md:block">
+            Norbert Frank Mba
+          </span>
         </Link>
-        <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">
-          <ul className="flex gap-2 text-sm font-medium">
+
+        <nav className="hidden items-center gap-8 md:flex">
+          <ul className="flex gap-6 text-sm font-medium uppercase tracking-wide">
             {props.routes.map((_link, index) => {
               return (
-                <li
-                  key={index}
-                  className="my-3 transition-transform duration-100 hover:scale-[1.1]"
-                >
+                <li key={index}>
                   <Link
                     href={_link.href}
                     className={classNames(
                       pathName === _link.href
-                        ? "font-semibold text-background dark:hover:text-foreground"
-                        : "text-foreground",
-                      "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
+                        ? "text-accent font-bold"
+                        : "text-muted-foreground hover:text-foreground",
+                      "transition-colors duration-200"
                     )}
                   >
-                    {_link.href === pathName && (
-                      <motion.span
-                        layoutId="tab-pill"
-                        animate={{
-                          transition: {
-                            x: {
-                              type: "spring",
-                              stiffness: 300,
-                              damping: 30,
-                            },
-                          },
-                        }}
-                        className="absolute inset-0 -z-10 rounded-full bg-accent group-hover:bg-accent/80"
-                      ></motion.span>
-                    )}
                     {_link.title}
                   </Link>
                 </li>
               );
             })}
           </ul>
+          <div className="h-6 w-px bg-border"></div>
           <ThemeSwitch />
         </nav>
-        <AnimatePresence>
+
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeSwitch />
           <MenuLogo open={isModalOpen} toggle={toggleModal} />
-        </AnimatePresence>
+        </div>
       </div>
 
       <MobileMenu

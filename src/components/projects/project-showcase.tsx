@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 import { AnimatePresence, motion } from "framer-motion";
 
 import { ArrowTopRight } from "@/components/icons";
@@ -25,104 +24,135 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
   }, [props.projects]);
 
   const handleAnimate = (index: number) => {
-    if (index === currentImage) return;
     setCurrentImage(index);
   };
 
   return (
-    <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
-      <div className="relative mx-auto max-w-7xl">
-        <div className="relative right-0 top-0 hidden lg:block">
-          <AnimatePresence>
-            <motion.div
-              key={props.projects[currentImage].title}
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{
-                x: "55%",
-                y: "50%",
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                },
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-              }}
-              className="absolute right-0 top-0 -z-50"
-            >
-              <Image
-                src={images[currentImage].LIGHT}
-                unoptimized
-                width={100}
-                height={100}
-                className="h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:hidden dark:border-accent/50"
-                alt={`project ${currentImage}`}
+    <section className="overflow-hidden py-24">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-14 md:px-20">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 flex items-center gap-4"
+        >
+          <h2 className="text-3xl font-black uppercase tracking-tight text-foreground sm:text-5xl">
+            Active Missions
+          </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="hidden h-px flex-1 origin-left bg-border sm:block"
+          />
+          <span className="hidden text-xs font-bold uppercase tracking-widest text-muted-foreground sm:block">
+            Status: Deployed
+          </span>
+        </motion.div>
+
+        {/* Desktop: Two Column Layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12">
+          {/* Left: Project List */}
+          <div className="flex flex-col gap-8 py-8">
+            {props.projects.map((proj, index) => (
+              <ProjectShowcaseList
+                activeProject={currentImage}
+                toggleList={handleAnimate}
+                data={proj}
+                key={index}
               />
-              {images[currentImage].DARK !== undefined && (
-                <Image
-                  src={images[currentImage].DARK!}
-                  unoptimized
-                  width={100}
-                  height={100}
-                  className="hidden h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:inline-block dark:border-accent/20 dark:shadow-lg dark:shadow-emerald-400/5"
-                  alt={`project ${currentImage}`}
-                />
-              )}
-            </motion.div>
-          </AnimatePresence>
+            ))}
+          </div>
+
+          {/* Right: Image Preview */}
+          <div className="relative">
+            <div className="sticky top-24">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={props.projects[currentImage].title}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: [0.6, 0.05, 0.01, 0.9]
+                  }}
+                >
+                  {/* Gamified Frame for Preview */}
+                  <div className="relative rounded-xl border-2 border-accent/20 bg-card p-3 shadow-2xl">
+                    <div className="absolute -top-3 left-6 z-10 bg-background px-3 text-xs font-bold uppercase tracking-widest text-accent">
+                      Target Preview
+                    </div>
+                    <div className="relative aspect-video overflow-hidden rounded-lg">
+                      <Image
+                        src={images[currentImage].LIGHT}
+                        unoptimized
+                        width={600}
+                        height={400}
+                        className="h-full w-full object-cover dark:hidden"
+                        alt={`${props.projects[currentImage].title} preview`}
+                      />
+                      {images[currentImage].DARK !== undefined && (
+                        <Image
+                          src={images[currentImage].DARK!}
+                          unoptimized
+                          width={600}
+                          height={400}
+                          className="hidden h-full w-full object-cover dark:inline-block"
+                          alt={`${props.projects[currentImage].title} preview`}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
-        <h2 className="text-xl font-semibold text-accent sm:text-3xl">
-          My projects
-        </h2>
-        <div className="hidden flex-col gap-6 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:flex">
-          {props.projects.map((proj, index) => (
-            <ProjectShowcaseList
-              activeProject={currentImage}
-              toggleList={handleAnimate}
-              data={proj}
-              key={index}
-            />
-          ))}
-        </div>
-        <div className="flex flex-col gap-4 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:hidden">
+
+        {/* Mobile List */}
+        <div className="flex flex-col gap-8 py-8 lg:hidden">
           {props.projects.map((proj) => (
             <Link
               key={proj.title}
               href={proj.href}
-              className="flex flex-col gap-1"
+              className="group flex flex-col gap-3 rounded-lg border border-border p-4 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10"
             >
-              <div className="flex gap-2">
-                <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden">
-                  {proj.index + 1}.
-                </span>
-                <span
-                  key={proj.title}
-                  className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden"
-                >
+              <div className="flex items-center justify-between">
+                <span className="text-xl font-bold text-foreground transition-colors group-hover:text-accent sm:text-2xl">
                   {proj.title}
                 </span>
+                <ArrowTopRight className="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" />
               </div>
-              <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-accent-foreground sm:text-lg">
+              <p className="flex flex-wrap gap-2">
                 {proj.tags.map((tag, index) => (
-                  <span key={index}>#{tag}</span>
+                  <span key={index} className="rounded-full bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+                    #{tag}
+                  </span>
                 ))}
               </p>
             </Link>
           ))}
         </div>
-        <Link
-          href="/projects"
-          className="group relative flex max-w-max items-center gap-4 text-base font-semibold sm:text-lg md:text-xl"
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-8"
         >
-          <div className="relative max-w-max">
-            <span className="text-accent">See more projects</span>
-            <span className="absolute -bottom-1 left-0 h-[2px] w-0 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"></span>
-          </div>
-          <div className="h-8 w-8">
-            <ArrowTopRight className="rotate-45 text-accent transition-transform duration-300 group-hover:rotate-0 group-hover:scale-[1.1]" />
-          </div>
-        </Link>
+          <Link
+            href="/projects"
+            className="group inline-flex items-center gap-2 border-b-2 border-accent pb-1 text-lg font-bold text-accent transition-all hover:gap-4"
+          >
+            <span>View Mission Archive</span>
+            <ArrowTopRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

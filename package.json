@@ -1,5 +1,5 @@
 {
-  "name": "amitchauhan-v2",
+  "name": "norbert-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -36,6 +36,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^14.0.4",
     "@svgr/webpack": "^8.1.0",
+    "@types/minimatch": "^5.1.2",
     "@types/node": "^20.10.4",
     "@types/nodemailer": "^6.4.14",
     "@types/react": "^18.2.45",

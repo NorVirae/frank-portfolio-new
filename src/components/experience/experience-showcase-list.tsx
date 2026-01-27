@@ -1,7 +1,5 @@
 import { useRef } from "react";
-
 import { motion, useScroll } from "framer-motion";
-
 import ExperienceShowcaseListItem, {
   type ExperienceShowcaseListItemProps,
 } from "@/components/experience/experience-showcase-list-item";
@@ -19,19 +17,32 @@ export default function ExperienceShowcaseList(
     target: ref,
     offset: ["start end", "center start"],
   });
+
+  // Determine if this is Experience or Education to customize the "Quest" title
+  const questTitle = props.title === "Experience" ? "Main Quests" : "Side Quests";
+
   return (
-    <div className="mx-auto my-40 max-w-7xl px-6 sm:px-14 md:my-60 md:px-20">
-      <h2 className="md:mb-30 mb-16 w-full bg-gradient-to-r from-accent/70 to-accent bg-clip-text text-center text-3xl font-bold text-transparent xs:text-4xl sm:text-6xl md:text-8xl">
-        {props.title}
-      </h2>
-      <div ref={ref} className="relative w-full md:mx-auto md:w-[80%]">
+    <div className="mx-auto my-24 max-w-5xl px-6 sm:px-14 md:my-32 md:px-20">
+      <div className="mb-16 flex flex-col items-center justify-center gap-4">
+        <span className="text-sm font-bold uppercase tracking-widest text-accent">
+          {props.title} Log
+        </span>
+        <h2 className="text-center text-4xl font-black uppercase tracking-tight text-foreground sm:text-5xl md:text-6xl">
+          {questTitle}
+        </h2>
+        <div className="h-1 w-20 bg-accent"></div>
+      </div>
+
+      <div ref={ref} className="relative w-full">
+        {/* Timeline Line */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-5 h-full w-[5px] origin-top rounded-lg bg-accent"
+          className="absolute left-8 top-0 h-full w-[2px] origin-top bg-accent/30 md:left-1/2 md:-ml-[1px]"
         ></motion.div>
-        <ul className="ml-4 w-full items-center">
+
+        <ul className="flex flex-col gap-12">
           {props.details.map((_details, index) => (
-            <ExperienceShowcaseListItem key={index} {..._details} />
+            <ExperienceShowcaseListItem key={index} {..._details} index={index} />
           ))}
         </ul>
       </div>
