@@ -133,7 +133,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                     key={index}
                     className="rounded-full bg-accent/10 px-2 py-1 text-xs font-bold text-accent"
                   >
-                    #{tag}
+                    {tag}
                   </span>
                 ))}
               </p>

@@ -8,6 +8,7 @@ export type ProjectShowcaseListItem = {
   index: number;
   title: string;
   href: string;
+  description: string;
   tags: string[];
   image: {
     LIGHT: string;
@@ -56,6 +57,7 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
           <span className="hover:-underline-offset-1 text-3xl font-semibold text-accent transition-colors duration-300 hover:underline sm:text-4xl md:text-5xl lg:hidden">
             {props.data.title}
           </span>
+
           <span
             className={classNames(
               "absolute -bottom-1 left-0 hidden h-1 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full lg:block",
@@ -63,8 +65,18 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
             )}
           ></span>
         </Link>
-        <p className="max-w-xl text-base font-semibold text-muted-foreground sm:text-lg">
-          {props.data.tags.map((tag) => `#${tag} `)}
+        {/* <p className="mt-4 flex-1 text-sm font-medium leading-relaxed text-muted-foreground">
+          {props.data.description}
+        </p> */}
+        <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-muted-foreground sm:text-lg">
+          {props.data.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-muted-foreground/40 bg-transparent px-3 py-1 text-sm"
+            >
+              {tag}
+            </span>
+          ))}
         </p>
       </div>
     </motion.div>

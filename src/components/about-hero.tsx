@@ -13,10 +13,7 @@ export default function AboutHero() {
         transition={{ duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
         className="w-full lg:w-1/2"
       >
-        <motion.div
-          whileHover={{ y: -10, transition: { duration: 0.3 } }}
-          className="mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-2xl border-2 border-accent/20 bg-muted shadow-2xl lg:mx-0"
-        >
+        <div className="relative aspect-[3/4] w-full max-w-md overflow-hidden rounded-2xl border-2 border-accent/20 bg-muted shadow-2xl lg:mx-0">
           <Image
             src={heroProfileImg}
             alt="Norbert Frank Mba"
@@ -39,7 +36,7 @@ export default function AboutHero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="absolute bottom-4 right-4 h-8 w-8 border-b-2 border-r-2 border-accent"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
       <motion.div
