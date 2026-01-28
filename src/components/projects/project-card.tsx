@@ -17,6 +17,7 @@ export interface ProjectCardProps {
   sourceCodeHref: string;
   liveWebsiteHref?: string;
   tags?: string[];
+  status: string;
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
@@ -171,9 +172,9 @@ export default function ProjectCard(props: ProjectCardProps) {
           </p>
 
           <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-              Mission Status: <span className="text-green-500">Completed</span>
-            </span>
+            {/* <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+              Mission Status: <span className="text-green-500">{props.status}</span>
+            </span> */}
 
             <div className="flex gap-4">
               <motion.a

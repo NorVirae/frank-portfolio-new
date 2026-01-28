@@ -92,6 +92,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     description: "African 3D Asset Market place for Games",
     sourceCodeHref: "",
     liveWebsiteHref: "https://loooty.com",
+    status: "Live",
   },
   {
     name: "Gun Drive",
@@ -105,6 +106,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     ],
     description: "A Unity Platformer/2D Shooter Mobile Game",
     sourceCodeHref: "",
+    status: "Staging",
     liveWebsiteHref:
       "https://itch.io/e/35317813/blackhardgames-updated-gun-drive",
   },
@@ -120,6 +122,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "Crypto AI Model, 3D Interactive model, with the ability to trade crypto, Open sourced ",
     sourceCodeHref: "https://github.com/NorVirae/AI_Agent_Trading_Amara.git",
     liveWebsiteHref: "https://www.youtube.com/watch?v=O7L23AfRxvk&t=8s",
+    status: "Staging",
   },
   {
     name: "Blackhards",
@@ -131,6 +134,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/blackhards4.webp",
       "/images/projects/blackhards5.webp",
     ],
+    status: "staging",
     description:
       "Marketplace for Game codes and Blackhards in house games Like Gun Drive",
     sourceCodeHref: "",
@@ -146,6 +150,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/cyb4.webp",
       "/images/projects/cyb5.webp",
     ],
+    status: "Discontinued",
     description: "Multiplayer game with features from Axie Infinity",
     sourceCodeHref: "",
     liveWebsiteHref: "https://cyberspawns.com",
@@ -153,6 +158,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Podship",
     favicon: "/images/vyra.svg",
+    status: "",
     imageUrl: [
       "/images/projects/pod1.webp",
       "/images/projects/pod2.webp",
@@ -177,6 +183,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/hospital5.webp",
       "/images/projects/hospital6.webp",
     ],
+    status: "Discontinued",
     description: "A Hospital Management system Equiped with SNOMED CT",
     sourceCodeHref: "",
     liveWebsiteHref: "",

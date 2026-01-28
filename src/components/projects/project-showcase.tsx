@@ -39,7 +39,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           className="mb-12 flex items-center gap-4"
         >
           <h2 className="text-3xl font-black uppercase tracking-tight text-foreground sm:text-5xl">
-            Active Missions
+            Missions
           </h2>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -49,7 +49,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
             className="hidden h-px flex-1 origin-left bg-border sm:block"
           />
           <span className="hidden text-xs font-bold uppercase tracking-widest text-muted-foreground sm:block">
-            Status: Deployed
+            Objectives: achieved
           </span>
         </motion.div>
 
