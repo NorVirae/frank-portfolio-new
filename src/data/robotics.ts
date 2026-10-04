@@ -87,7 +87,6 @@ export const roboticsProjects = [
       "Configured Betaflight and FlySky radio inputs.",
       "Checked receiver response, motor operation, and receiver failsafe behaviour during bench setup.",
       "Safe flight testing indoors while arming and disarming",
-
     ],
     tags: ["Betaflight", "FlySky", "FPV", "Bench integration"],
   },

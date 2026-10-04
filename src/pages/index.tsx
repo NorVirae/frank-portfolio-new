@@ -178,9 +178,7 @@ export default function Home() {
                 Designed to learn.
               </h2>
             </div>
-            <p>
-              Prototypes, integration work, and research
-            </p>
+            <p>Prototypes, integration work, and research</p>
           </div>
           <div className="robotics-project-grid">
             {roboticsProjects.map((project, index) => (

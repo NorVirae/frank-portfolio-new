@@ -21,8 +21,6 @@ export const roboticsMedia: Record<string, ProjectMedia[]> = {
     photo("droneblackmamba2.jpg", "Mq9 reaper inspired"),
     video("droneblackmamba1-1", "Sting Drone inspired · outdoor demonstration"),
     video("drone1", "Sting Drone inspired · outdoor demonstration"),
-
-    
   ],
   "robot-arm": [
     video("robotarm2", "Robot arm · prototype demonstration"),
@@ -50,7 +48,7 @@ export const roboticsMedia: Record<string, ProjectMedia[]> = {
     photo("Circuitboard2.jpg", "PCB design · component placement"),
     photo("circuitboard1.jpg", "Electronics workbench · prototyping notes"),
   ],
-  "fpv": [
+  fpv: [
     video("fpv3", "5Inch FPV · Outlook"),
     video("fpv1", "5Inch FPV · Test Flight with straps"),
     video("fpv4", "5Inch FPV · Handling LiPo battery fire hazard"),
