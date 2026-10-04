@@ -179,8 +179,7 @@ export default function Home() {
               </h2>
             </div>
             <p>
-              Prototypes, integration work, and research at Wicrypt Labs,
-              alongside my personal FPV build.
+              Prototypes, integration work, and research
             </p>
           </div>
           <div className="robotics-project-grid">

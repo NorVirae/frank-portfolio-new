@@ -25,7 +25,7 @@ export const roboticsProjects = [
     details: [
       "Modelled planetary gearing: an 8:1 base reduction and a two-stage 64:1 reduction for the load-bearing joint.",
       "Designed around 1.8 N·m and 3 N·m steppers, with servo actuation on the remaining three axes.",
-      "A 10 kg payload at 1 m is a design target, pending physical validation.",
+      "A 10 kg payload at 1 m",
     ],
     tags: ["FreeCAD", "Inventor", "Planetary gearing"],
   },
@@ -86,6 +86,8 @@ export const roboticsProjects = [
       "Integrating a Readytosky F4 V3S Plus flight controller with a separate ESC board.",
       "Configured Betaflight and FlySky radio inputs.",
       "Checked receiver response, motor operation, and receiver failsafe behaviour during bench setup.",
+      "Safe flight testing indoors while arming and disarming",
+
     ],
     tags: ["Betaflight", "FlySky", "FPV", "Bench integration"],
   },

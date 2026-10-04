@@ -18,7 +18,11 @@ const video = (file: string, caption: string): ProjectMedia => ({
 
 export const roboticsMedia: Record<string, ProjectMedia[]> = {
   "black-mamba": [
-    video("drone1", "Fixed-wing prototype · outdoor demonstration"),
+    photo("droneblackmamba2.jpg", "Mq9 reaper inspired"),
+    video("droneblackmamba1-1", "Sting Drone inspired · outdoor demonstration"),
+    video("drone1", "Sting Drone inspired · outdoor demonstration"),
+
+    
   ],
   "robot-arm": [
     video("robotarm2", "Robot arm · prototype demonstration"),
@@ -45,5 +49,10 @@ export const roboticsMedia: Record<string, ProjectMedia[]> = {
     photo("Circuitboard4.jpg", "Circuit design · KiCad schematic"),
     photo("Circuitboard2.jpg", "PCB design · component placement"),
     photo("circuitboard1.jpg", "Electronics workbench · prototyping notes"),
+  ],
+  "fpv": [
+    video("fpv3", "5Inch FPV · Outlook"),
+    video("fpv1", "5Inch FPV · Test Flight with straps"),
+    video("fpv4", "5Inch FPV · Handling LiPo battery fire hazard"),
   ],
 };
