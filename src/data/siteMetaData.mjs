@@ -15,7 +15,7 @@ export const siteMetadata = {
   socialBanner: "/static/homepage.png",
   email: "norbertmbafrank@gmail.com",
   github: "https://github.com/NorVirae",
-  X: "https://x.com/norbertfrankmba",
+  X: "https://x.com/InvntorV",
   linkedin: "https://www.linkedin.com/in/norbert-frank-mba/",
   locale: "en-US",
   googleSiteVerification: "_YJlO90eSoye2AQOhbkRAzNbejzCGiTgAD4RNR3NtHc",
