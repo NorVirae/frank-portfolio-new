@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { NextSeo } from "next-seo";
 
 import ProjectCard from "@/components/projects/project-card";
@@ -39,13 +40,19 @@ export default function Projects() {
       <section className="mb-40 mt-6 w-full sm:mt-12">
         <div className="mx-auto max-w-7xl px-6 sm:px-14 md:px-20">
           <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
-            Projects
+            Software projects
           </h1>
           <div className="my-2">
             <span className="text-sm text-muted-foreground">
-              Here are some of the projects I&apos;d like to share
+              Web applications, marketplaces, and interactive software.
             </span>
           </div>
+          <Link
+            href="/#robotics-projects"
+            className="mt-4 inline-block text-accent underline underline-offset-4"
+          >
+            Explore robotics &amp; UAV projects →
+          </Link>
           <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
             {PROJECTS_CARD.map((card, index) => (
               <ProjectCard key={index} {...card} />
@@ -53,8 +60,8 @@ export default function Projects() {
           </div>
           <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
             <span className="text-xl font-bold md:text-2xl">
-              I am currently building new projects and learning backend
-              development to expand my skill set beyond frontend.
+              My software work spans full-stack applications, cloud
+              infrastructure, and interactive experiences.
             </span>
             <p className="mt-10 text-base md:text-xl">
               Visit my github to see some of the latest projects{" "}

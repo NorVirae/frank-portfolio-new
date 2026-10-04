@@ -60,3 +60,487 @@
     @apply min-h-screen bg-background text-foreground;
   }
 }
+/* Robotics portfolio: a technical notebook with an independent visual hierarchy. */
+.robotics-page {
+  --ink: #183b35;
+  --paper: #f6f7f2;
+  --line: #d9dfd5;
+  background: var(--paper);
+  color: var(--ink);
+}
+.engineering-wrap {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+.engineering-hero {
+  padding-top: 32px;
+  background-image: radial-gradient(#d4dbd0 0.7px, transparent 0.7px);
+  background-size: 20px 20px;
+}
+.discipline-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: fit-content;
+  padding: 5px;
+  background: #e6eae1;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+}
+.discipline-switch a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+}
+.discipline-switch a[aria-current] {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 3px;
+}
+.engineering-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 36px;
+  padding: 70px 0 64px;
+}
+.eyebrow {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  line-height: 1.8;
+}
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #527c35;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.engineering-hero h1 {
+  font-size: clamp(52px, 6.4vw, 86px);
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  font-weight: 600;
+  margin: 24px 0;
+}
+.engineering-hero h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: #64764a;
+}
+.hero-description {
+  max-width: 410px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #53655b;
+}
+.engineering-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 26px;
+  margin-top: 30px;
+}
+.engineering-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  background: #183b35;
+  color: #fff;
+  padding: 15px 21px;
+  border-radius: 3px;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+.engineering-button:hover {
+  background: #365b48;
+}
+.engineering-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 5px;
+}
+.hero-blueprint {
+  border: 1px solid #cdd6c8;
+  background: #edf0e6cc;
+  padding: 20px;
+  position: relative;
+}
+.blueprint-label,
+.project-drawing-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font: 9px monospace;
+  letter-spacing: 0.08em;
+}
+.engineering-drawing {
+  width: 100%;
+  height: auto;
+  color: #506a47;
+}
+.hero-blueprint .engineering-drawing {
+  margin: 26px 0;
+}
+.blueprint-caption {
+  border-top: 1px solid #cdd6c8;
+  padding-top: 17px;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.blueprint-caption strong {
+  display: block;
+  font: italic 23px Georgia, serif;
+  margin-bottom: 6px;
+}
+.blueprint-caption span {
+  font: 9px monospace;
+}
+.drawing-badge {
+  border: 1px solid #acbba1;
+  padding: 5px;
+}
+.engineering-strip {
+  border-top: 1px solid #cdd6c8;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  font: 10px monospace;
+  letter-spacing: 0.07em;
+}
+.engineering-strip a {
+  display: inline-flex;
+  gap: 8px;
+}
+.engineering-section {
+  padding-block: 80px;
+  scroll-margin-top: 85px;
+}
+.robotics-page h2 {
+  font-size: clamp(30px, 3.5vw, 45px);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  margin: 14px 0 24px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 36px;
+  margin-bottom: 30px;
+}
+.section-heading > p {
+  max-width: 340px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #53655b;
+  margin-bottom: 25px;
+}
+.robotics-project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+.robotics-project {
+  border: 1px solid var(--line);
+  background: #fffefa;
+  scroll-margin-top: 90px;
+}
+.project-drawing {
+  padding: 18px 22px 0;
+  background: #e9ede3;
+  border-bottom: 1px solid var(--line);
+}
+.project-drawing .engineering-drawing {
+  height: 210px;
+}
+.robotics-project-body {
+  padding: 26px;
+}
+.project-status {
+  font: 10px monospace;
+  color: #5c704c;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.robotics-project h3 {
+  margin: 12px 0;
+  font-size: 25px;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+.robotics-project-body > p:not(.project-status),
+.robotics-project li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #53655b;
+}
+.engineering-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 22px 0;
+}
+.engineering-tags span {
+  font: 10px monospace;
+  border: 1px solid var(--line);
+  padding: 6px 9px;
+  border-radius: 2px;
+}
+.robotics-project details {
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+}
+.robotics-project summary {
+  cursor: pointer;
+  font-size: 12px;
+}
+.robotics-project summary span {
+  float: right;
+  font-size: 18px;
+}
+.robotics-project details[open] summary span {
+  transform: rotate(45deg);
+}
+.robotics-project ul {
+  padding-left: 18px;
+  list-style: disc;
+  margin-top: 15px;
+}
+.robotics-project li + li {
+  margin-top: 10px;
+}
+.capabilities-section {
+  background: #e9ede3;
+  border-block: 1px solid var(--line);
+}
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.capability-number {
+  font: 11px monospace;
+  color: #6a7b59;
+}
+.capabilities-grid h3 {
+  font-size: 17px;
+  margin: 20px 0 12px;
+  font-weight: 600;
+}
+.capabilities-grid p,
+.engineering-background p:not(.eyebrow),
+.software-bridge p:not(.eyebrow) {
+  color: #53655b;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.engineering-background {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.engineering-background .engineering-text-link {
+  margin-top: 25px;
+}
+.engineering-role {
+  border-left: 1px solid var(--line);
+  padding-left: 35px;
+}
+.engineering-role h3 {
+  font-size: 23px;
+  margin: 10px 0;
+}
+.role-divider {
+  border-top: 1px solid var(--line);
+  margin: 25px 0;
+}
+.engineering-role p + p {
+  margin-top: 14px;
+}
+.software-bridge {
+  border-top: 1px solid var(--line);
+  padding-block: 50px 75px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.software-bridge p {
+  max-width: 530px;
+}
+.robotics-page a:focus-visible,
+.robotics-page summary:focus-visible {
+  outline: 3px solid #9b642c;
+  outline-offset: 5px;
+}
+@media (max-width: 760px) {
+  .engineering-hero-grid {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+  }
+  .hero-break {
+    display: none;
+  }
+  .hero-blueprint {
+    max-width: 550px;
+  }
+  .engineering-section {
+    padding-block: 50px;
+  }
+  .section-heading {
+    display: block;
+  }
+  .robotics-project-grid {
+    grid-template-columns: 1fr;
+  }
+  .capabilities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .engineering-background {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .software-bridge {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 400px) {
+  .engineering-wrap {
+    width: calc(100% - 32px);
+  }
+  .discipline-switch a {
+    padding: 9px 7px;
+    font-size: 10px;
+  }
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .blueprint-label {
+    font-size: 8px;
+  }
+}
+
+.robotics-gallery {
+  border-bottom: 1px solid var(--line);
+  background: #e9ede3;
+  min-width: 0;
+}
+.gallery-stage {
+  position: relative;
+  height: 310px;
+  background: #14251f;
+}
+.gallery-stage video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.gallery-stage > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gallery-image {
+  object-fit: contain;
+}
+.gallery-expand {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  background: #14251fe6;
+  padding: 7px 10px;
+  font: 11px monospace;
+  border-radius: 3px;
+}
+.gallery-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 16px;
+  font: 11px/1.6 monospace;
+}
+.gallery-caption span {
+  white-space: nowrap;
+}
+.gallery-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px 14px;
+}
+.gallery-navigation > button {
+  flex-shrink: 0;
+  padding: 8px 3px;
+}
+.gallery-thumbnails {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 3px;
+  scrollbar-width: thin;
+}
+.gallery-thumbnails button {
+  position: relative;
+  flex: 0 0 76px;
+  border: 2px solid transparent;
+  opacity: 0.65;
+}
+.gallery-thumbnails button[aria-pressed="true"] {
+  border-color: #183b35;
+  opacity: 1;
+}
+.gallery-thumbnails button:hover {
+  opacity: 1;
+}
+.gallery-thumbnails img {
+  width: 72px;
+  height: 50px;
+  object-fit: cover;
+}
+.gallery-thumbnails svg {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  color: white;
+  background: #183b35;
+  border-radius: 3px;
+  padding: 2px;
+  width: 18px;
+  height: 18px;
+}
+.gallery-navigation button:focus-visible {
+  outline: 3px solid #9b642c;
+  outline-offset: 2px;
+}
+@media (max-width: 400px) {
+  .gallery-stage {
+    height: 240px;
+  }
+}
+
+.robotics-project {
+  min-width: 0;
+}

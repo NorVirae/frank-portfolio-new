@@ -60,15 +60,8 @@ export default function Footer() {
         <div className="mt-20 flex w-full flex-col-reverse items-center justify-between gap-4 border-t border-border pt-8 text-xs font-medium uppercase tracking-wider text-muted-foreground md:flex-row">
           <span>&copy; {new Date().getFullYear()} Norbert Frank Mba</span>
           <div className="flex gap-8">
-            <span>Nigeria, NG (Remote)</span>
-            <span>
-              Local Time:{" "}
-              {new Date().toLocaleTimeString("en-US", {
-                hour: "2-digit",
-                minute: "2-digit",
-                timeZone: "Europe/Zurich",
-              })}
-            </span>
+            <span>Enugu, Nigeria</span>
+            <a href="tel:+2347025488825">+234 702 548 8825</a>
           </div>
         </div>
       </div>

@@ -2,6 +2,21 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
+    title: "RL & Robotics Engineer",
+    organisation: { name: "Wicrypt Labs", href: "/#robotics-projects" },
+    date: "Robotics & UAV development",
+    location: "Enugu, Nigeria",
+    description:
+      "Hands-on aircraft control-surface integration, robotic-arm development, planetary gearing, KiCad PCB design, and exploratory computer vision, ROS 2 simulation, and PPO-based manipulation research.",
+  },
+  {
+    title: "DevOps Engineer",
+    organisation: { name: "Hammer Games", href: "/software" },
+    date: "Jul 2024 - Dec 2024",
+    location: "",
+    description: "Software infrastructure and DevOps engineering.",
+  },
+  {
     title: "Lead Software Engineer",
     organisation: {
       name: "Blackhards",

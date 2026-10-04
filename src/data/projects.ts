@@ -36,8 +36,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       "TypeScript",
     ],
     image: {
-      LIGHT: "/images/projects/AIAmara1.webp",
-      DARK: "/images/projects/AIAmara1.webp",
+      LIGHT: "/images/projects/AiAmara1.webp",
+      DARK: "/images/projects/AiAmara1.webp",
     },
   },
 
@@ -83,7 +83,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     favicon: "/images/vyra.svg",
     imageUrl: [
       "/images/projects/loooty1.webp",
-      "/images/projects/loooty2.webp",
+      "/images/projects/looooty2.webp",
       "/images/projects/loooty3.webp",
       "/images/projects/loooty4.webp",
       "/images/projects/loooty5.webp",
@@ -114,7 +114,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "AI Amara",
     favicon: "/images/vyra.svg",
     imageUrl: [
-      "/images/projects/AIAmara1.webp",
+      "/images/projects/AiAmara1.webp",
       "/images/projects/AIAmara2.webp",
       "/images/projects/AIAmara3.webp",
     ],
